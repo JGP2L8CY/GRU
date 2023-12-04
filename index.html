@@ -26,26 +26,22 @@
     }
 </style>
 </head>
- 
 
 <div class="container">
     <div class="row">
-        <!-- <div class="col justify-content-center text-center"> -->
         <h5 style="margin-top: 10px;"><b>An Analysis of Gated Recurrent Neural Networks in Sequence Modeling</b></h5>
         <p>The paper compares different recurrent units in RNNs—LSTMs and GRUs—with the hypothesis that specialized units outperform vanilla RNNs.</p> 
 
         <h5 style="margin-top: 10px;">Recurrent Neural Network (RNN):</h5>
-        <p>Designed for sequence modeling, RNNs capture information from past inputs for current predictions. However, the vanishing gradient problem limits their ability to capture long-term dependencies.</p>
+        <p>Designed for sequence modeling, RNNs capture information from past inputs for current predictions. However, the vanishing gradient problem limits their ability to capture long-term dependencies. A technology that emerged in the early 1980s, it is a model that was studied to help machines learn, understand, and produce human language, a goal of early artificial intelligence research. This required the processing of sequence data and was studied in order to respond to new input while remembering previous information. RNNs were the cornerstone of the current development of LSTMs, providing scalability to a wide range of applications. It is a model that has played a key role in the emergence of new models such as Transformer.</p>
 
-        <h5 style="margin-top: 10;">Long Short-Term Memory (LSTM):</h5>
-        <p>Specifically addressing the vanishing gradient problem, LSTMs have a complex structure enabling selective retention or forgetting of information in long sequences, making them effective for capturing long-term dependencies.</p>
+        <h5 style="margin-top: 10px;">Long Short-Term Memory (LSTM):</h5>
+        <p>Specifically addressing the vanishing gradient problem, LSTMs have a complex structure enabling selective retention or forgetting of information in long sequences, making them effective for capturing long-term dependencies. A form of model that evolved from RNNs and is similarly used to process sequence data. It is structurally similar to an RNN, but overcomes the limitations of RNNs, which lack the ability to store and retain information over long periods of time through a much more complex computational process. In a structured LSTM cell, weights are passed through an input gate, forget gate, and output gate to determine whether to retain information over a long period of time.</p>
 
         <h5 style="margin-top: 10px;">Gated Recurrent Unit (GRU):</h5>
         <p>Similar to LSTM but with a simpler structure, GRUs address the vanishing gradient problem. They use update and reset gates to control information flow, deciding how much past information to forget and how much new information to incorporate.</p>
         <p>Decades ago, Recurrent Neural Networks (RNNs) were proposed for handling variable-length sequential input through a shared hidden state. However, practical limitations arose due to vanishing and exploding gradient problems during training. The introduction of the long-short term memory (LSTM) recurrent unit addressed these challenges by confidently capturing long-term dependencies.</p>
         <p>Subsequently, the Gated Recurrent Unit (GRU) emerged with a similar goal of tracking long-term dependencies while addressing gradient problems. LSTMs employ input, forget, and output gates, while GRUs use a reset gate and an update gate. Both retain memory from prior activations, allowing preservation of features for extended periods and reducing the risk of the vanishing gradient problem.</p>
-        </div>
-
         <p style="margin-bottom: 20px;"><small>**image source: https://wikidocs.net/166316</small></p>
     </div>
 </div>
