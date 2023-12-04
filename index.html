@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Your Project Name</title>
-<meta property="og:title" content=Your Project Name" />
+<title>Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling</title>
+<meta property="og:title" content="Your Project Name" />
 <meta name="twitter:title" content="Your Project Name" />
 <meta name="description" content="Your project about your cool topic described right here." />
 <meta property="og:description" content="Your project about your cool topic described right here." />
@@ -16,35 +16,142 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
-
+<style>
+    h2, h5 {
+        font-size: 25pt;
+        padding-bottom: 15px;
+    }
+    .section {
+        padding-bottom: 20px;
+    }
+</style>
 </head>
-<body class="nd-docs">
-<div class="nd-pageheader">
- <div class="container">
- <h1 class="lead">
- <nobr class="widenobr">Your Project Name</nobr>
- <nobr class="widenobr">For CS 7150</nobr>
- </h1>
- </div>
-</div><!-- end nd-pageheader -->
+ 
 
 <div class="container">
-<div class="row">
-<div class="col justify-content-center text-center">
-<h2>An Analysis of [papername]</h2>
-<p>Describe the paper and the big question about it that interests you.</p>
-</div>
-</div>
-<div class="row">
-<div class="col">
+    <div class="row">
+        <!-- <div class="col justify-content-center text-center"> -->
+        <h5 style="margin-top: 10px;"><b>An Analysis of Gated Recurrent Neural Networks in Sequence Modeling</b></h5>
+        <p>The paper compares different recurrent units in RNNs—LSTMs and GRUs—with the hypothesis that specialized units outperform vanilla RNNs.</p> 
 
-<h2>Literature Review; Biography; Social Impact; Industry Applications; Follow-on Research; and Peer-Review</h2>
+        <h5 style="margin-top: 10px;">Recurrent Neural Network (RNN):</h5>
+        <p>Designed for sequence modeling, RNNs capture information from past inputs for current predictions. However, the vanishing gradient problem limits their ability to capture long-term dependencies.</p>
 
-<p>Just as we have done in the role-playing exercise, analyze the paper from all perspectives.
-</p>
+        <h5 style="margin-top: 10;">Long Short-Term Memory (LSTM):</h5>
+        <p>Specifically addressing the vanishing gradient problem, LSTMs have a complex structure enabling selective retention or forgetting of information in long sequences, making them effective for capturing long-term dependencies.</p>
+
+        <h5 style="margin-top: 10px;">Gated Recurrent Unit (GRU):</h5>
+        <p>Similar to LSTM but with a simpler structure, GRUs address the vanishing gradient problem. They use update and reset gates to control information flow, deciding how much past information to forget and how much new information to incorporate.</p>
+        <p>Decades ago, Recurrent Neural Networks (RNNs) were proposed for handling variable-length sequential input through a shared hidden state. However, practical limitations arose due to vanishing and exploding gradient problems during training. The introduction of the long-short term memory (LSTM) recurrent unit addressed these challenges by confidently capturing long-term dependencies.</p>
+        <p>Subsequently, the Gated Recurrent Unit (GRU) emerged with a similar goal of tracking long-term dependencies while addressing gradient problems. LSTMs employ input, forget, and output gates, while GRUs use a reset gate and an update gate. Both retain memory from prior activations, allowing preservation of features for extended periods and reducing the risk of the vanishing gradient problem.</p>
+        </div>
+
+        <p style="margin-bottom: 20px;"><small>**image source: https://wikidocs.net/166316</small></p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h2 style="margin-top: 10px;"><b>Literature Review:</b></h2>
+        <div>
+            <p>The experiment involves training three recurrent neural network (RNN) models—LSTM-RNN, GRU-RNN, and tanh-RNN—on various tasks, aiming for a fair comparison with similar numbers of parameters. The models are intentionally kept small to avoid overfitting. The study includes polyphonic music modeling and speech signal modeling tasks.</p>
+            <p>Results indicate that on polyphonic music datasets, the GRU-RNN generally outperforms LSTM-RNN and tanh-RNN, except for the Nottingham dataset where performance is comparable. On Ubisoft datasets, RNNs with gating units (GRU-RNN and LSTM-RNN) consistently outperform the traditional tanh-RNN. The choice between LSTM and GRU depends on the dataset and task.</p>
+            <p>Training details include the use of RMSProp, weight noise with fixed standard deviation, and gradient norm rescaling to prevent exploding gradients. Learning rates are selected to maximize validation performance. The validation set is used for early-stop training.</p>
+            <p>Learning curves show that GRU-RNN makes faster progress in terms of both the number of updates and CPU time on music datasets. On Ubisoft datasets, tanh-RNN has a smaller computational requirement per update but makes slower progress and eventually stops with a worse result.</p>
+            <p>Overall, the experiment suggests the advantages of gating units (GRU-RNN and LSTM-RNN) over traditional recurrent units in terms of faster convergence and better final solutions. However, the choice between LSTM and GRU may depend on the specific dataset and task.</p>
+        </div>
+    </div>
+</div>
+
+
+<h2 style="margin-top: 10px;"><b>Biography:</b></h2>
+
+<!-- Author1 -->
+<div>
+    <h5><b>1. Junyoung Chung</b></h5>
+    <img src="chung_junyoung.jpg" alt="Junyoung Chung" width="300" height="300">
+    <ul>
+        <li>Staff Research Scientist at DeepMind</li>
+        <li>PhD in Machine Learning at Montreal University</li>
+        <li>Contributed to generate AlphaCode, AlphaStar</li>
+        <li>AlphaCode and AlphaStar are both cognitive programming models, consisting of OpenAI</li>
+    </ul>
+</div>
+
+<!-- Author2-->
+<div>
+    <h5><b>2. Caglar Gulcehre</b></h5>
+    <img src="caglar_gulcehre.png" alt="Caglar Gulcehre" width="300" height="300">
+    <ul>
+        <li>Former Staff Research Scientist at DeepMind</li>
+        <li>MILA Supervision PhD</li>
+        <li>Contributed to constructing algorithms in OpenAI</li>
+        <li>Author of “Regularized Behavior Value Estimation” paper</li>
+    </ul>
+</div>
+
+<!-- Author3 -->
+<div>
+    <h5><b>3. Kyunghyun Cho</b></h5>
+    <img src="Cho_Kyunghyun.jpg" alt="Kyunghyun Cho" width="300" height="300">
+    <ul>
+        <li>Professor of computer and data science at NYU</li>
+        <li>Contributed to developing the Sequence to Sequence learning model with the Google Brain team in 2014</li>
+        <li>Regarded as an important figure in the research and development of modern artificial intelligence</li>
+    </ul>
+</div>
+
+<!-- Author4 -->
+<div>
+    <h5><b>4. Yoshua Bengio</b></h5>
+    <img src="yoshua_bengio.png" alt="Yoshua Bengio" width="300" height="300">
+    <ul>
+        <li>One of the pioneers in the field of Deep Learning</li>
+        <li>Full Professor of Computer Science and operating a research team at the University of Montreal</li>
+        <li>Founder of the Montreal Institute of Artificial Intelligence (MILA) and significantly contributed to the A.I field</li>
+        <li>In 2018, Awarded the Turing Prize</li>
+    </ul>
+</div>
+
+<h2><b>Social Impact</b></h2> 
+
+<div>
+    <h5><b>Positive Impact</b></h5>
+    <h6><b>1. Cost-Effective Natural Language Processing:</b></h6>
+      <p>The reduced model computing and learning time associated with GRUs enable companies to develop cost-effective natural language processing (NLP) models. 
+        This reduction in costs makes advanced language processing technology more accessible, allowing a broader range of companies to implement and deploy language models without prohibitive expenses.</p>
+
+      <h6><b> 2. Increased Choices and Convenience:</b></h6>
+    <p>The cost reduction facilitated by these recurrent neural networks enables companies to offer substitutes for expensive models. 
+      This increase in affordability leads to a greater variety of choices and enhanced convenience for users. Users can access a wider range of applications and services based on 
+      advanced language processing models.</p>
+</div>
+
+<div>
+    <h5><b>Negative Impact</b></h5>
+    <h6><b> 1. Reliability for Specialized Tasks:</b></h6>
+    <p>LSTMs are known to perform well with complex data and long sequences. However, if the output of LSTMs is less accurate, it can be unreliable for users relying on models for specialized tasks. 
+      For applications where precision and reliability are crucial, such as medical diagnoses or critical decision-making, inaccuracies in LSTM outputs can have significant consequences.
+    </p>
+</div>
+
+
+<h2><b>Industry Practitioner</b></h2>
+<div>
+    <h5><b>Efficiency Advantage</b></h5>
+    <p>Fewer parameters due to a simple network structure means inducing low costs.</p>
+    <p>Faster training time and lower memory requirements make it possible to produce alternative models despite the company, which cannot build large models.</p>
+</div>
+
+<div>
+    <h5><b>Flexibility</b></h5>
+    <p>The GRU can be applied to sequence data of various tunings with similar performance of LSTM with solving cost issues.</p>
+</div>
 
 <p>Optionally, in addition to a reading-based analysis, implement the ideas of the paper in code, and report on your findings.
 </p>
+
+
 
 <h3>References</h3>
 
@@ -56,7 +163,9 @@
 
 <h2>Team Members</h2>
                                                    
-<p>Make sure to list here is who is on the team.</p>
+<p>Hwijong Im
+   Aishwarya Nagendra Kumar
+</p>
 
   
 </div><!--col-->
