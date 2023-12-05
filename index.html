@@ -32,6 +32,11 @@
         <h5 style="margin-top: 10px;"><b>An Analysis of Gated Recurrent Neural Networks in Sequence Modeling</b></h5>
         <p>The paper compares different recurrent units in RNNs—LSTMs and GRUs—with the hypothesis that specialized units outperform vanilla RNNs.</p> 
 
+        <img src="RNN_LSTM_GRU.png" alt="RNN GRU LSTM">
+
+        <p>Decades ago, Recurrent Neural Networks (RNNs) were proposed for handling variable-length sequential input through a shared hidden state. However, practical limitations arose due to vanishing and exploding gradient problems during training. The introduction of the long-short term memory (LSTM) recurrent unit addressed these challenges by confidently capturing long-term dependencies.</p>
+        <p>Subsequently, the Gated Recurrent Unit (GRU) emerged with a similar goal of tracking long-term dependencies while addressing gradient problems. LSTMs employ input, forget, and output gates, while GRUs use a reset gate and an update gate. Both retain memory from prior activations, allowing preservation of features for extended periods and reducing the risk of the vanishing gradient problem.</p>
+
         <h5 style="margin-top: 10px;">Recurrent Neural Network (RNN):</h5>
         <p>Designed for sequence modeling, RNNs capture information from past inputs for current predictions. However, the vanishing gradient problem limits their ability to capture long-term dependencies. A technology that emerged in the early 1980s, it is a model that was studied to help machines learn, understand, and produce human language, a goal of early artificial intelligence research. This required the processing of sequence data and was studied in order to respond to new input while remembering previous information. RNNs were the cornerstone of the current development of LSTMs, providing scalability to a wide range of applications. It is a model that has played a key role in the emergence of new models such as Transformer.</p>
 
@@ -40,8 +45,6 @@
 
         <h5 style="margin-top: 10px;">Gated Recurrent Unit (GRU):</h5>
         <p>Similar to LSTM but with a simpler structure, GRUs address the vanishing gradient problem. They use update and reset gates to control information flow, deciding how much past information to forget and how much new information to incorporate.</p>
-        <p>Decades ago, Recurrent Neural Networks (RNNs) were proposed for handling variable-length sequential input through a shared hidden state. However, practical limitations arose due to vanishing and exploding gradient problems during training. The introduction of the long-short term memory (LSTM) recurrent unit addressed these challenges by confidently capturing long-term dependencies.</p>
-        <p>Subsequently, the Gated Recurrent Unit (GRU) emerged with a similar goal of tracking long-term dependencies while addressing gradient problems. LSTMs employ input, forget, and output gates, while GRUs use a reset gate and an update gate. Both retain memory from prior activations, allowing preservation of features for extended periods and reducing the risk of the vanishing gradient problem.</p>
         <p style="margin-bottom: 20px;"><small>**image source: https://wikidocs.net/166316</small></p>
     </div>
 </div>
@@ -50,11 +53,30 @@
     <div class="row">
         <h2 style="margin-top: 10px;"><b>Literature Review:</b></h2>
         <div>
-            <p>The experiment involves training three recurrent neural network (RNN) models—LSTM-RNN, GRU-RNN, and tanh-RNN—on various tasks, aiming for a fair comparison with similar numbers of parameters. The models are intentionally kept small to avoid overfitting. The study includes polyphonic music modeling and speech signal modeling tasks.</p>
-            <p>Results indicate that on polyphonic music datasets, the GRU-RNN generally outperforms LSTM-RNN and tanh-RNN, except for the Nottingham dataset where performance is comparable. On Ubisoft datasets, RNNs with gating units (GRU-RNN and LSTM-RNN) consistently outperform the traditional tanh-RNN. The choice between LSTM and GRU depends on the dataset and task.</p>
-            <p>Training details include the use of RMSProp, weight noise with fixed standard deviation, and gradient norm rescaling to prevent exploding gradients. Learning rates are selected to maximize validation performance. The validation set is used for early-stop training.</p>
-            <p>Learning curves show that GRU-RNN makes faster progress in terms of both the number of updates and CPU time on music datasets. On Ubisoft datasets, tanh-RNN has a smaller computational requirement per update but makes slower progress and eventually stops with a worse result.</p>
-            <p>Overall, the experiment suggests the advantages of gating units (GRU-RNN and LSTM-RNN) over traditional recurrent units in terms of faster convergence and better final solutions. However, the choice between LSTM and GRU may depend on the specific dataset and task.</p>
+          <p>In this experiment, the authors aimed to compare the performance of different types of recurrent neural network (RNN) units, specifically Long Short-Term Memory (LSTM) units, Gated Recurrent Units (GRUs), and traditional tanh units. The primary objective was to conduct a fair comparison by ensuring that each model had approximately the same number of parameters. The models were intentionally kept small to avoid overfitting, which could potentially impact the comparison.</p>
+          
+          <b>Model Configuration:</b>
+          <p>Sizes of Models: The authors trained three models for each task, each using LSTM, GRU, or tanh units. The sizes of these models were chosen to have roughly the same number of parameters.</p>
+            
+          <p>Training Techniques: The models were trained using RMSProp, and weight noise with a fixed standard deviation of 0.075 was applied. The norm of the gradient was rescaled to 1 at every update to prevent exploding gradients.</p>
+            
+          <p>Learning Rate Selection: The learning rate was selected to maximize validation performance out of 10 randomly chosen log-uniform candidates.</p>
+
+          <b>Results:</b>
+          
+          <p>The results were presented in terms of negative log-probabilities on different music datasets (Nottingham, JSB Chorales, MuseData, Piano-midi) and Ubisoft datasets (Ubisoft A and Ubisoft B). The performance of each model was evaluated on both training and test sets.</p>
+
+          <b>Music Datasets:</b>
+          <p>The GRU-RNN outperformed LSTM-RNN and tanh-RNN on most music datasets, except for Nottingham where the performance was comparable among the three models.</p>
+          <b>Ubisoft Datasets:</b>
+          <p>Both GRU-RNN and LSTM-RNN outperformed tanh-RNN on the Ubisoft datasets. LSTM-RNN performed better on Ubisoft A, while GRU-RNN performed better on Ubisoft B.</p>
+            
+          <b>Observations:</b>
+          <p><b>Advantages of Gating Units:</b> The results indicated that RNNs with gating units (GRU-RNN and LSTM-RNN) generally outperformed the more traditional tanh-RNN. Gating units led to faster convergence and better final solutions.</p>
+
+          <p><b>Comparison of LSTM and GRU:</b> The study did not provide conclusive evidence regarding the superiority of either LSTM or GRU, suggesting that the choice of the gated recurrent unit may heavily depend on the specific dataset and task.</p>
+            
+          <p><b>Learning Curves:</b> Visualizing the learning curves revealed that GRU-RNN made faster progress in terms of the number of updates and actual CPU time, particularly evident in the music datasets. Tanh-RNN, while computationally more efficient per update, struggled to make significant progress in the Ubisoft datasets.</p>
         </div>
     </div>
 </div>
