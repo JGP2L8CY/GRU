@@ -34,6 +34,7 @@
 
         <img src="RNN_LSTM_GRU.png" alt="RNN GRU LSTM">
 
+        <h5 style="margin-top: 10px;">Historical Background:</h5>
         <p>Decades ago, Recurrent Neural Networks (RNNs) were proposed for handling variable-length sequential input through a shared hidden state. However, practical limitations arose due to vanishing and exploding gradient problems during training. The introduction of the long-short term memory (LSTM) recurrent unit addressed these challenges by confidently capturing long-term dependencies.</p>
         <p>Subsequently, the Gated Recurrent Unit (GRU) emerged with a similar goal of tracking long-term dependencies while addressing gradient problems. LSTMs employ input, forget, and output gates, while GRUs use a reset gate and an update gate. Both retain memory from prior activations, allowing preservation of features for extended periods and reducing the risk of the vanishing gradient problem.</p>
 
@@ -186,20 +187,37 @@
 </p>
 
 
+<div>
+  <h2><b>Peer review:</b></h2>
+  <b> Aishwarya</b>
+
+  <p>Originality: 6/10</p>
+  <p>The paper offers a valuable empirical comparison of LSTM, GRU, and tanh units in sequence modeling tasks, particularly in polyphonic music and raw speech signal datasets. While not entirely groundbreaking, the study provides a novel contribution by evaluating and comparing these units across diverse datasets. Related work is appropriately referenced.</p>
+
+  <p>Quality: 8/10</p>
+  <p>The paper exhibits technical soundness through well-designed experiments, employing a fixed parameter approach. The methodology is comprehensive, covering polyphonic music and speech signal modeling with appropriate metrics. The authors transparently acknowledge study limitations, notably the lack of a conclusive LSTM vs. GRU comparison.</p>
+
+  <p>Clarity: 7/10</p>
+  <p>While generally well-written, there's room for enhanced clarity, especially in task and dataset explanations. Minor improvements in transitions, particularly in the conclusion, would enhance readability.</p>
+
+  <p>Significance: 7/10</p>
+  <p>The paper's significance lies in practical implications for choosing recurrent units. The demonstrated advantages of GRU over traditional tanh units provide valuable insights for researchers and practitioners. Inclusion of diverse datasets enhances relevance.</p>
+
+  <p>Overall : 7/10</p>
+</div>
+
 
 <h3>References</h3>
-
 <p><a name="bottou-1990">[1]</a> <a href="https://papers.baulab.info/Bottou-1990.pdf"
   >L&eacute;on Bottou and Patrick Gallinari.
   <em>A framework for the cooperation of learning algorithms.</em></a>
   Advances in neural information processing systems 3 (1990).
-</p>
+</p>       
 
 <h2>Team Members</h2>
                                                    
-<p>Hwijong Im
-   Aishwarya Nagendra Kumar
-</p>
+<p>Hwijong Im</p>
+<p>Aishwarya Nagendra Kumar</p>
 
   
 </div><!--col-->
