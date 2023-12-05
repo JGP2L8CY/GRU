@@ -17,6 +17,28 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 <style>
+        body {
+            margin: 0; /* 기본 마진 제거 */
+            font-family: 'Open Sans', sans-serif; /* 기본 폰트 설정 */
+        }
+        .header-banner {
+            background-color: navy; /* 배너의 배경 색상을 네이비로 설정 */
+            color: white; /* 텍스트 색상을 흰색으로 설정 */
+            padding: 40px 0; /* 상하 여백 추가 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+        }
+        .header-banner h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 50px; /* 제목의 폰트 크기 */
+        }
+        .header-banner p {
+            margin: 10px 0; /* 상하 여백 */
+        }
+        .analysis-authors {
+            color: #00FFFF; /* 사이언 색상 코드 */
+            font-size: 20px; /* 저자 이름의 폰트 크기 */
+        }
     h2, h5 {
         font-size: 25pt;
         padding-bottom: 15px;
@@ -233,25 +255,31 @@
 
 <div class="container">
     <div class="row">
-<h3>References</h3>
-<p><a name="bottou-1990">[1]</a> <a href="https://papers.baulab.info/Bottou-1990.pdf"
-  >L&eacute;on Bottou and Patrick Gallinari.
-  <em>A framework for the cooperation of learning algorithms.</em></a>
-  Advances in neural information processing systems 3 (1990).
-</p>       
+        <h3>References</h3>
+        <p>[1] L&eacute;on Bottou and Patrick Gallinari. "A framework for the cooperation of learning algorithms." Advances in neural information processing systems 3 (1990).</p>
+        <p>[2] <a href="https://github.com/adeshpande3/LSTM-Sentiment-Analysis/blob/master/Pre-Trained%20LSTM.ipynb">Pre-Trained LSTM model for Sentiment Analysis</a> (Accessed 2023).</p>
+        <p>[3] <a href="https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be">Understanding GRU networks</a> (Accessed 2023).</p>
+        <p>[4] <a href="https://medium.com/@anishnama20/understanding-gated-recurrent-unit-gru-in-deep-learning-2e54923f3e2">Understanding Gated Recurrent Unit (GRU) in Deep Learning</a> (Accessed 2023).</p>
+        <!-- 추가할 GRU 관련 서적 참고문헌 -->
+        <p>[5] Cho, K., et al. "Learning phrase representations using RNN encoder-decoder for statistical machine translation." arXiv preprint arXiv:1406.1078 (2014).</p>
+        <p>[6] Chung, J., et al. "Empirical evaluation of gated recurrent neural networks on sequence modeling." arXiv preprint arXiv:1412.3555 (2014).</p>
+        <p>[7] Olah, C. "Understanding LSTM Networks." colah's blog (2015).</p>
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-    <h2>Team Members</h2>
-                                                       
-    <p>Hwijong Im</p>
-    <p>Aishwarya Nagendra Kumar</p>
+        <h2>Team Members</h2>
+    </div>
+    <div class="row">
+        <p>Hwijong Im</p>
+    </div>
+    <div class="row">
+        <p>Aishwarya Nagendra Kumar</p>
     </div>
 </div>
 
-</div> <!-- container -->
+    
 
 <footer class="nd-pagefooter">
   <div class="row">
