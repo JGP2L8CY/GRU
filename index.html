@@ -1,22 +1,23 @@
 <!doctype html>
 <html lang="en">
+        
 <head>
-<title>Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling</title>
-<meta property="og:title" content="Your Project Name" />
-<meta name="twitter:title" content="Your Project Name" />
-<meta name="description" content="Your project about your cool topic described right here." />
-<meta property="og:description" content="Your project about your cool topic described right here." />
-<meta name="twitter:description" content="Your project about your cool topic described right here." />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" /> 
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<!-- bootstrap for mobile-friendly layout -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
-<style>
+    <title>Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling</title>
+    <meta property="og:title" content="Your Project Name" />
+    <meta name="twitter:title" content="Your Project Name" />
+    <meta name="description" content="Your project about your cool topic described right here." />
+    <meta property="og:description" content="Your project about your cool topic described right here." />
+    <meta name="twitter:description" content="Your project about your cool topic described right here." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" /> 
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- bootstrap for mobile-friendly layout -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
         body {
             margin: 0; /* 기본 마진 제거 */
             font-family: 'Open Sans', sans-serif; /* 기본 폰트 설정 */
@@ -39,14 +40,15 @@
             color: #00FFFF; /* 사이언 색상 코드 */
             font-size: 20px; /* 저자 이름의 폰트 크기 */
         }
-    h2, h5 {
-        font-size: 25pt;
-        padding-bottom: 15px;
-    }
-    .section {
-        padding-bottom: 20px;
-    }
-</style>
+        h2, h5 {
+            font-size: 25pt;
+            padding-bottom: 15px;
+        }
+        .section {
+            padding-bottom: 20px;
+        }
+        /* 추가적인 스타일이 필요할 경우 여기에 작성하세요 */
+    </style>
 </head>
 
 <div class="container">
@@ -111,6 +113,12 @@
           <p><b>Comparison of LSTM and GRU:</b> The study did not provide conclusive evidence regarding the superiority of either LSTM or GRU, suggesting that the choice of the gated recurrent unit may heavily depend on the specific dataset and task.</p>
             
           <p><b>Learning Curves:</b> Visualizing the learning curves revealed that GRU-RNN made faster progress in terms of the number of updates and actual CPU time, particularly evident in the music datasets. Tanh-RNN, while computationally more efficient per update, struggled to make significant progress in the Ubisoft datasets.</p>
+
+          <div>
+          <img src="results1.png" alt="results 1" width="400" height="350">  
+          <img src="results2.png" alt="results 2" width="400" height="350">
+          </div>
+                
         </div>
     </div>
 </div>
@@ -260,7 +268,6 @@
         <p>[2] <a href="https://github.com/adeshpande3/LSTM-Sentiment-Analysis/blob/master/Pre-Trained%20LSTM.ipynb">Pre-Trained LSTM model for Sentiment Analysis</a> (Accessed 2023).</p>
         <p>[3] <a href="https://towardsdatascience.com/understanding-gru-networks-2ef37df6c9be">Understanding GRU networks</a> (Accessed 2023).</p>
         <p>[4] <a href="https://medium.com/@anishnama20/understanding-gated-recurrent-unit-gru-in-deep-learning-2e54923f3e2">Understanding Gated Recurrent Unit (GRU) in Deep Learning</a> (Accessed 2023).</p>
-        <!-- 추가할 GRU 관련 서적 참고문헌 -->
         <p>[5] Cho, K., et al. "Learning phrase representations using RNN encoder-decoder for statistical machine translation." arXiv preprint arXiv:1406.1078 (2014).</p>
         <p>[6] Chung, J., et al. "Empirical evaluation of gated recurrent neural networks on sequence modeling." arXiv preprint arXiv:1412.3555 (2014).</p>
         <p>[7] Olah, C. "Understanding LSTM Networks." colah's blog (2015).</p>
